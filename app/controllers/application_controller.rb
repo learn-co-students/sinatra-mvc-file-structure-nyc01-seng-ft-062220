@@ -8,4 +8,9 @@ class ApplicationController < Sinatra::Base
   get "/" do
   	erb :index
   end
+
+  get "/roman:test_url_variable" do
+    "You found the secret page #{params[:test_url_variable]}"
+  end
+
 end
